@@ -31,6 +31,7 @@ public class BoostrapServer {
                 protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
                     System.out.println("收到数据");
                 }
+
             })
             .bind(new InetSocketAddress(9000));
         future.addListener((ChannelFutureListener) future1 -> {

@@ -81,4 +81,16 @@ public class Test1 {
             assertEquals((int) in.readByte(), 27);
         }
     }
+
+    @Test
+    public void test2(){
+         buffer.writeByte(-17);
+        short i = buffer.readUnsignedByte();
+
+        int i1 = -17 & 0xff;
+
+        System.out.println(i);
+        System.out.println(i1);
+
+    }
 }
